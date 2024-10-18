@@ -5,9 +5,13 @@ public class InsertionSort{
     // calls the sorting algorithm
     public static void main(String[] args){
         Random random = new Random();
+        // lowest possible number
         int lower = 0;
+        // highest possible number
         int upper = 100000;
-        int[] arr = random.ints(100000, lower, upper).toArray();
+        // amount of numbers in the list
+        int amountNumbers = 100000;
+        int[] arr = random.ints(amountNumbers, lower, upper).toArray();
 
         if (args.length > 1){
             arr = new int[args.length];
@@ -15,7 +19,7 @@ public class InsertionSort{
                 arr[i] = Integer.parseInt(args[i]);
             }
         }
-        
+
         System.out.print("initial list: ");
         for (int i = 0; i < arr.length; i++){
             System.out.print(arr[i] + " ");
