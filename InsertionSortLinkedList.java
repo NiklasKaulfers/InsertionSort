@@ -14,9 +14,7 @@ public class InsertionSortLinkedList{
         LinkedList.Node current = linkedListPreview.head;
         while (current != null) {
             LinkedList.Node next = current.next;
-
             sorted = sortedInsert(sorted, current);
-
             current = next;
         }
         
@@ -32,16 +30,13 @@ public class InsertionSortLinkedList{
      */
     private LinkedList.Node sortedInsert(LinkedList.Node sorted, LinkedList.Node newNode) {
         if (sorted == null || newNode.value < sorted.value) {
-            // Insert at the beginning of the sorted list
             newNode.next = sorted;
             return newNode;
         } else {
-            // Traverse the sorted part to find the insertion point
             LinkedList.Node current = sorted;
             while (current.next != null && current.next.value < newNode.value) {
                 current = current.next;
             }
-            // Insert newNode after current
             newNode.next = current.next;
             current.next = newNode;
         }
