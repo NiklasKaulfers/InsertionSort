@@ -1,7 +1,13 @@
 public class InsertionSort{
-    // for usage with Sorting interface 
-    // public class InsertionSort implements Sorting
-    // @Override
+    /** 
+    * for usage with Sorting interface:
+    * 
+    * ###########
+    * public class InsertionSort implements Sorting
+    * @Override
+    * ###########
+    * 
+    */ 
     public int[] sort(int[] arr){
         // going through each value of the array
         for (int i = 0; i < arr.length; i++){
