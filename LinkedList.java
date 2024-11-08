@@ -30,7 +30,8 @@ public class LinkedList{
             }
         }
     
-    
+        // helper funtion for getting the size
+        // for testing
         public int size(){
             int i = 0;
             Node temp = head;
@@ -40,6 +41,9 @@ public class LinkedList{
             }
             return i;
         }
+
+        // helper function to turn an int[] into a LinkedList
+        // for testing
         public static LinkedList toLinkedList(int[] array){
             LinkedList linkedList = new LinkedList();
             for (int i = 0; i < array.length; i++){
@@ -47,7 +51,9 @@ public class LinkedList{
             }
             return linkedList;
         }
-    
+
+        // helper function to turn a LinkedList into an int[]
+        // for testing
         public static int[] toInt(LinkedList linkedList){
             int[] array = new int[linkedList.size()];
             Node curr = linkedList.head;
